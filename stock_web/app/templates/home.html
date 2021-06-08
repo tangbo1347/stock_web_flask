@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Main{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">
+                    Toggle navigation
+                </span>
+            </button>
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="navbar-brand" href="/data">Data</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+{{tb_test}}
+{% endblock %}
