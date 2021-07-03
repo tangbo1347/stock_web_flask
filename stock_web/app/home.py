@@ -9,6 +9,7 @@ def home_page_process():
 
     if return_data["result"]:
         data = return_data['data']
+        print(data)
         return render_template("home.html", data=data)
     else:
         abort(400)

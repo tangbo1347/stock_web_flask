@@ -25,8 +25,12 @@
 {% endblock %}
 
 {% block content %}
-<p>{{ data.today_date}}大盘运行情况如下:</p>
-<p>大盘涨跌幅{{data.dapan.percent}}，收于{{data.dapan.close}}点. 创业板涨跌幅{{data.chuang.percent}}，收于{{data.chuang.close}}点</p>
-<p>其中，上涨个股 {{data.up_count}} 家， 下跌个股 {{data.down_count}} 家。 涨停个股 {{data.up10_count}}家，跌停个股 {{data.down10_count}} 家。</p>
-<p>{{data.up3_coount}}家个股涨幅超过3个点，{{data.down3_count}}家个股跌幅超过3个点。</p>
+<p>{{ data.daily.today_date}}大盘运行情况如下:</p>
+<p>  大盘涨跌幅{{data.daily.dapan.percent}} %，收于{{data.daily.dapan.close}}点. 创业板涨跌幅{{data.daily.chuang.percent}} %，收于{{data.daily.chuang.close}}点</p>
+<p>  其中，上涨个股 {{data.daily.up_count}} 家， 下跌个股 {{data.daily.down_count}} 家。 涨停个股 {{data.daily.up10_count}}家，跌停个股 {{data.daily.down10_count}} 家。</p>
+<p>  {{data.daily.up3_count}}家个股涨幅超过3个点，{{data.daily.down3_count}}家个股跌幅超过3个点。</p>
+
+
+<p>  今日超跌个股数为 {{data.upfell.felld.today}}, 前一个交易日为{{data.upfell.felld.yesterday}}.
+    超涨个股数为 {{data.upfell.upd.today}}, 前一个叫交易日为 {{data.upfell.upd.yesterday}}</p>
 {% endblock %}
